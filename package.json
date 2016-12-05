@@ -1,0 +1,12 @@
+{
+	"name": "language-ebsl",
+	"version":"0.0.1",
+	"description":"Syntax highlighting for Envision-Based Software Language (EBSL) is the programming",
+	"engines":{
+		"atom":"*",
+		"node":"*"
+	},
+	"license": "MIT",
+	"author": "Christopher Burke"
+
+}

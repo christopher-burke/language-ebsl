@@ -1,0 +1,14 @@
+***********************************************************
+* This is the color of comment lines
+***********************************************************
+$INSERT UT.INSERTS I_COMMON
+EDITED.DATA = ICONV(INPUT.DATA, "MD4")
+LOOP
+WHILE (EDITED.DATA LT 1000) DO
+	EDITED.DATA += LEN(A.ARG1)
+REPEAT
+VL.LIST.VAR1 = 'A' : @VM : "B" : @VM `C`
+LABEL.FOR.GOSUB:
+FOR_EACH ASSOCIATED LIST.VAR1 MATCHING "B"
+	PRINT CHECKSUM(V.LIST.VAR1)
+END_EACH LIST.VAR1

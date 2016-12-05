@@ -1,0 +1,118 @@
+'scopeName': 'source.ebsl'
+'name': 'Envision Basic'
+'fileTypes' : ['Envision']
+'patterns': [
+    {
+        'match': '\\b(?i:(0x\\h*))'
+        'name': 'constant.numeric.integer.hexadecimal.python'
+    }
+    {
+        'match':'((FOR|END)[_\\w+]*)'
+        'name' : 'EnvisionBasicLanguage.EnvisionBasicMacros'
+    }
+    {
+        'match':'(@IM|@FM|@AM|@VM|@SM|@SVM|@TM|@ACCOUNT|@LOGNAME|@PATH|@SENTENCE|@SYSTEM.RETURN.CODE|@UID|@USER.RETURN.CODE|@WHO)'
+        'name' : 'EnvisionBasicLanguage.SystemVariables'
+    }
+    {
+        'match': '\\$EQU.*|\\$EXP.*|\\$USING.*|\\$INSERT.*'
+        'name': 'EnvisionBasicLanguage.PreProcStatements'
+    }
+    {
+        'match': '((\\*).*$\\n?)'
+        'name':'EnvisionBasicLanguage.comments'
+    }
+    {
+        'match' : 'V[L]?[\.][\\w|\.]+'
+        'name' : 'EnvisionBasicLanguage.ReservedEnvisionWords'
+    }
+    {
+        'match':'(INPUT\\.SOURCE|INPUT\\.DATA|EDITED\\.DATA|OUTPUT\\.DATA|NEXT\\.PROC\\.FLD|ERROR\\.OCCURRED|WARNING\\.OCCURRED|MSG|MSG\\.ARGUMENTS|RECORD\\.CANCEL|RECORD\\.END|PROCESS\\.END|CRNT\\.FLD\\.DSPLY\\.WDTH|SCREEN\\.REFRESH|CRNT\\.FLD\\.INDX|THREAD\\.FLAG|FLD\\.NOECHO|LKUP\\.RETURN\\.CODE|ADD\\.MODE\\.ALLOWED|LOOKUP\\.SUBFILE|LOOKUP\\.SEARCH|DATATEL\\.DEBUG|XL\\.DEBUG\\.MSG|@COMMAND)'
+        'name': 'EnvisionBasicLanguage.ReservedEnvisionWords'
+    }
+    {
+        'match':'FIND|INPUT|\\sIN\\s'
+        'name':'EnvisionBasicLanguage.keywords'
+    }
+
+    {
+        'match':'\\s*\\b(BEGIN|BY|CASE|DO|ELSE|END|FIND|FINDSTR|IF|LOCATE|LOCKED|LOOP|NEXT|PROGRAM|REPEAT|SETTING|STEP|SUBROUTINE|THEN|TO|UNTIL|WHILE)\\b'
+        'name':'EnvisionBasicLanguage.keywords'
+    }
+    {
+        'match': '\\b(?i:(0x\\h*)L)'
+        'name': 'EnvisionBasicLanguage.numbers'
+    }
+    {
+        'match': '\\b(?i:(0x\\h*))'
+        'name': 'EnvisionBasicLanguage.numbers'
+    }
+    {
+        'match': '\\b(?i:(0o?[0-7]+)L)'
+        'name': 'EnvisionBasicLanguage.numbers'
+    }
+    {
+        'match': '\\b(?i:(0o?[0-7]+))'
+        'name': 'EnvisionBasicLanguage.numbers'
+    }
+    {
+        'match': '\\b(?i:(0b[01]+)L)',
+        'name': 'EnvisionBasicLanguage.numbers'
+    }
+    {
+        'match': '\\b(?i:(0b[01]+))',
+        'name': 'EnvisionBasicLanguage.numbers'
+    }
+    {
+        'match': '\\b(?i:(((\\d+(\\.(?=[^a-zA-Z_])\\d*)?|(?<=[^0-9a-zA-Z_])\\.\\d+)(e[\\-\\+]?\\d+)?))J)'
+        'name': 'EnvisionBasicLanguage.numbers'
+    }
+    {
+        'match': '\\b(?i:(\\d+\\.\\d*(e[\\-\\+]?\\d+)?))(?=[^a-zA-Z_])'
+        'name': 'EnvisionBasicLanguage.numbers'
+    }
+    {
+        'match': '(?<=[^0-9a-zA-Z_])(?i:(\\.\\d+(e[\\-\\+]?\\d+)?))'
+        'name': 'EnvisionBasicLanguage.numbers'
+    }
+    {
+        'match': '\\b(?i:(\\d+e[\\-\\+]?\\d+))'
+        'name': 'EnvisionBasicLanguage.numbers'
+    }
+    {
+        'match': '\\b(?i:([1-9]+[0-9]*|0)L)'
+        'name': 'EnvisionBasicLanguage.numbers'
+    }
+    {
+        'match': '\\b([1-9]+[0-9]*|0)'
+        'name': 'EnvisionBasicLanguage.numbers'
+    }
+    {
+        'match':'[\\b|\\s]CHECKSUM\b'
+        'name':'EnvisionBasicLanguage.numbers'
+    }
+    {
+        'match':'\\b\\.(ABS|ACOS|ALPHA|ASIN|ATAN|BITAND|BITOR|BITXOR|BITNOT|CHANGE|CHAR|CHARLEN|CONVERT|COS|COUNT|DATE|DCOUNT|DELETE|DOWNCASE|EXP|EXTRACT|FIELD|FIELDSTORE|FMT|GETUSERNAME|GROUP|ICONV|ICONVS|INDEX|INSERT|INT|LEN|LN|LOWER|MATCHFIELD|MAXIMUM|MINIMUM|MOD|NEG|NOT|NUM|OCONV|OCONVS|PWR|RAISE|REM|REMOVE|REPLACE|RND|SEQ|SIN|SOUNDEX|SPACE|SQRT|STR|SUBSTRINGS|SUM|TAN|TIME|TIMEDATE|TRIM|TRIMB|TRIMF|UPCASE|CATS|COUNTS|EQS|GES|LENS|LES|LTS|NES|NOTS|NUMS|SEQS|TRIMS|DQUOTE|DROUND|SQUOTE|ENVIRON|@|ASCII|CHECKSUM|COL1|COL2|DIR|EBCDIC|GETPTR|HASH|INDICES|INMAT|QUOTE|SADD|SCMP|SDIV|SMUL|#SORT|SSUB|STATUS|SYSTEM|UNASSIGNED)\\b'
+        'name':'EnvisionBasicLanguage'
+    }
+    {
+        'match':'\\b(ABS|ACOS|ALPHA|ASIN|ATAN|BITAND|BITOR|BITXOR|BITNOT|CHANGE|CHAR|CHARLEN|CONVERT|COS|COUNT|DATE|DCOUNT|DELETE|DOWNCASE|EXP|EXTRACT|FIELD|FIELDSTORE|FMT|GETUSERNAME|GROUP|ICONV|ICONVS|INDEX|INSERT|INT|LEN|LN|LOWER|MATCHFIELD|MAXIMUM|MINIMUM|MOD|NEG|NOT|NUM|OCONV|OCONVS|PWR|RAISE|REM|REMOVE|REPLACE|RND|SEQ|SIN|SOUNDEX|SPACE|SQRT|STR|SUBSTRINGS|SUM|TAN|TIME|TIMEDATE|TRIM|TRIMB|TRIMF|UPCASE|CATS|COUNTS|EQS|GES|LENS|LES|LTS|NES|NOTS|NUMS|SEQS|TRIMS|DQUOTE|DROUND|SQUOTE|ENVIRON|@|ASCII|CHECKSUM|COL1|COL2|DIR|EBCDIC|GETPTR|HASH|INDICES|INMAT|QUOTE|SADD|SCMP|SDIV|SMUL|#SORT|SSUB|STATUS|SYSTEM|UNASSIGNED)\\b'
+        'name':'EnvisionBasicLanguage.Functions'
+    }
+    {
+        'match':'\\b(GE|LE|LT|GT|EQ|NE|MATCH|MATCHES|AND|OR|CAT)\\b'
+        'name' : 'EnvisionBasicLanguage.Operators'
+    }
+    {
+        'match':'($EQU|$EXP|$USING|$INSERT)'
+        'name' : 'EnvisionBasicLanguage.PreProcStatements'
+    }
+    {
+        'match':'(^.*:$)'
+        'name' : 'EnvisionBasicLanguage.SubroutineLabel'
+    }
+    {
+        'match':'[\'|\"|\`][\\w\\s]*[\'|\"|\`]'
+        'name':'EnvisionBasicLanguage.string'
+    }
+]

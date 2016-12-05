@@ -1,0 +1,5 @@
+'.text.ebsl':
+  'editor':
+    'commentStart': '*'
+    'increaseIndentPattern': '^.*(\\{\\}?[^}"\']*|\\([^)"\']*)$'
+    'decreaseIndentPattern': '^(.*\\*/)?\\s*\\}[;\\s]*$'
