@@ -15,11 +15,11 @@ Then you will need to reload the window using [cmd]-[shift]-[p] to bring up comm
 
 On Windows:
 
-* CMD + SHIFT + P > Type 'Reload'
+* Ctrl + SHIFT + P > Type 'Reload'
 
-on Mac:
+On Mac:
 
-* Command + SHIFT + P  Type 'Reload'
+* Command + SHIFT + P > Type 'Reload'
 
 ## Copyright
 
