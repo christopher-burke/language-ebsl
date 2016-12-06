@@ -11,7 +11,7 @@ To install into Atom
     cd ~/.atom/packages
     git clone https://github.com/christopher-burke/language-ebsl.git
 
-Then you will need to reload the window using [cmd]-[shift]-[p] to bring up command palette and execute Window: Reload.
+Then you will need to reload the Atom window using [cmd]+[shift]+[p] to bring up command palette and execute Window: Reload.
 
 On Windows:
 
