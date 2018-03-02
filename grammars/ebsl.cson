@@ -7,7 +7,7 @@
         'name': 'constant.numeric.integer.hexadecimal.python'
     }
     {
-        'match':'((FOR|END)[_\\w+]*)'
+        'match':'\\b((FOR|END)[_\\w+]*)'
         'name' : 'EnvisionBasicLanguage.EnvisionBasicMacros'
     }
     {
@@ -23,7 +23,8 @@
         'name':'EnvisionBasicLanguage.comments'
     }
     {
-        'match' : 'V[L]?[\.][\\w|\.]+'
+        #'match' : 'V[L]?[\.][\\w|\.]+'
+        'match'  : '\\bV[L]?((\\.)\\w+)+'
         'name' : 'EnvisionBasicLanguage.ReservedEnvisionWords'
     }
     {
@@ -36,7 +37,7 @@
     }
 
     {
-        'match':'\\s*\\b(BEGIN|BY|CASE|CALL|DO|ELSE|END|FIND|FINDSTR|IF|LOCATE|LOCKED|LOOP|NEXT|PROGRAM|REPEAT|SETTING|STEP|SUBROUTINE|THEN|TO|UNTIL|WHILE)\\b'
+        'match':'\\s*\\b(BEGIN|BY|CASE|CALL|DO|ELSE|END|FIND|FINDSTR|GOSUB|IF|LOCATE|LOCKED|LOOP|NEXT|PROGRAM|REPEAT|RETURN|SETTING|STEP|SUBROUTINE|THEN|TO|UNTIL|WHILE)\\b'
         'name':'EnvisionBasicLanguage.keywords'
     }
     {
